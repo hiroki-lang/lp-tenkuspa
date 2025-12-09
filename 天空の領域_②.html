@@ -1,0 +1,2024 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>天空の領域 - エクソソーム×ヘッドスパ | パターンC</title>
+    <meta name="description" content="横浜関内の発毛促進サポート専門サロン。15,000人以上の頭皮を診断した毛髪診断士によるヘッドスパとエクソソーム療法の相乗効果で、薄毛・抜け毛のお悩みをサポートします。">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+/* ========================================
+   天空の領域 LP - パターンC CSS
+   ゴールド×ホワイトの高級感デザイン
+======================================== */
+
+/* ========================================
+   基本設定
+======================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --gold-primary: #d4a017;
+    --gold-dark: #b8860b;
+    --gold-light: #f4d03f;
+    --text-primary: #2c2c2c;
+    --text-secondary: #666666;
+    --bg-white: #ffffff;
+    --bg-light: #f9f9f9;
+    --border-color: #e0e0e0;
+    --shadow-sm: 0 2px 10px rgba(0,0,0,0.08);
+    --shadow-md: 0 4px 20px rgba(0,0,0,0.12);
+    --shadow-lg: 0 8px 30px rgba(0,0,0,0.16);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    color: var(--text-primary);
+    line-height: 1.8;
+    background-color: var(--bg-white);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ========================================
+   ヘッダー
+======================================== */
+.header {
+    background-color: var(--bg-white);
+    box-shadow: var(--shadow-sm);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    background: linear-gradient(135deg, var(--gold-primary), var(--gold-dark));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: 2px;
+}
+
+.nav {
+    display: flex;
+    gap: 30px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: var(--text-primary);
+    font-weight: 500;
+    transition: color 0.3s;
+    font-size: 15px;
+}
+
+.nav a:hover,
+.nav a.nav-link-alt {
+    color: var(--gold-primary);
+}
+
+/* ========================================
+   ヒーローセクション
+======================================== */
+.hero {
+    position: relative;
+    padding: 120px 0;
+    text-align: center;
+    overflow: hidden;
+}
+
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.hero-background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.9;
+}
+
+.hero-background::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(255,255,255,0.3), rgba(249,249,249,0.2));
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.hero-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--gold-primary), var(--gold-dark));
+    color: var(--bg-white);
+    padding: 10px 30px;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+}
+
+.hero-title {
+    font-size: 52px;
+    font-weight: 700;
+    color: #FFFFFF;
+    margin-bottom: 30px;
+    line-height: 1.4;
+    letter-spacing: 3px;
+text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+}
+
+.hero-description {
+    font-size: 18px;
+    color: #FFFFFF;
+    margin-bottom: 50px;
+    line-height: 2;
+text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.8);
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* ========================================
+   ボタン
+======================================== */
+.btn {
+    display: inline-block;
+    padding: 18px 40px;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 16px;
+    transition: all 0.3s;
+    border: 2px solid transparent;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, var(--gold-primary), var(--gold-dark));
+    color: var(--bg-white);
+    box-shadow: var(--shadow-md);
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-lg);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--gold-primary);
+    border-color: var(--gold-primary);
+}
+
+.btn-secondary:hover {
+    background: linear-gradient(135deg, var(--gold-primary), var(--gold-dark));
+    color: var(--bg-white);
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: var(--gold-primary);
+    border: 2px solid var(--gold-primary);
+}
+
+.btn-outline:hover {
+    background: linear-gradient(135deg, var(--gold-primary), var(--gold-dark));
+    color: var(--bg-white);
+}
+
+/* ========================================
+   セクション共通
+======================================== */
+section {
+    padding: 80px 0;
+}
+
+.section-title-wrapper {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-title {
+    font-size: 40px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+
+.gold-text {
+    background: linear-gradient(135deg, var(--gold-primary), var(--gold-dark));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.title-underline {
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(to right, var(--gold-primary), var(--gold-dark));
+    margin: 0 auto;
+    border-radius: 2px;
+}
+
+/* ========================================
+   実績セクション
+======================================== */
+.achievements {
+    background-color: var(--bg-light);
+}
+
+.achievements-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.achievement-image img {
+    border-radius: 20px;
+    box-shadow: var(--shadow-md);
+}
+
+.achievement-title {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 20px;
+    line-height: 1.7;
+}
+
+.achievement-description {
+    font-size: 16px;
+    color: var(--text-secondary);
+    margin-bottom: 30px;
+    line-height: 1.9;
+}
+
+.achievement-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.stat-item {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--bg-white);
+    border-radius: 15px;
+    box-shadow: var(--shadow-sm);
+}
+
+.stat-number {
+    font-size: 36px;
+    font-weight: 700;
+    background: linear-gradient(135deg, var(--gold-primary), var(--gold-dark));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 8px;
+}
+
+.stat-label {
+    font-size: 14px;
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+/* ========================================
+   お悩みセクション
+======================================== */
+
+/* お悩みセクション - 4つのカード（2x2グリッド） */
+.concerns {
+    background: linear-gradient(180deg, #ffffff 0%, rgba(212, 165, 116, 0.05) 100%);
+}
+
+.concerns-grid-4 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    max-width: 900px;
+    margin: 0 auto 60px;
+}
+
+.concern-card {
+    transition: transform 0.3s ease;
+}
+
+.concern-card:hover {
+    transform: translateY(-5px);
+}
+
+.concern-bubble {
+    background: white;
+    border: 3px solid var(--primary-color);
+    border-radius: 20px;
+    padding: 35px 25px;
+    margin-bottom: 20px;
+    position: relative;
+    box-shadow: 0 8px 25px rgba(212, 165, 116, 0.15);
+    transition: all 0.3s ease;
+}
+
+.concern-card:hover .concern-bubble {
+    box-shadow: 0 12px 35px rgba(212, 165, 116, 0.25);
+    border-color: var(--accent-color);
+}
+
+.concern-bubble::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 15px solid white;
+}
+
+.concern-bubble::before {
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 18px solid transparent;
+    border-right: 18px solid transparent;
+    border-top: 18px solid var(--primary-color);
+    z-index: -1;
+}
+
+.concern-bubble p {
+    font-size: 17px;
+    line-height: 1.8;
+    color: var(--text-primary);
+    font-weight: 600;
+    margin: 0;
+    text-align: center;
+}
+
+.concern-card h3 {
+    text-align: center;
+    font-size: 19px;
+    color: var(--primary-color);
+    font-weight: 700;
+    margin-top: 25px;
+}
+
+/* 解決策への誘導セクション */
+.concerns-solution-wrapper {
+    text-align: center;
+    margin-top: 80px;
+    padding: 40px 0;
+}
+
+.solution-arrow {
+    font-size: 48px;
+    color: var(--primary-color);
+    margin-bottom: 30px;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-15px);
+    }
+    60% {
+        transform: translateY(-7px);
+    }
+}
+
+
+
+
+
+
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+.concerns-solution {
+    font-size: 26px;
+    line-height: 1.8;
+    font-weight: 700;
+    color: white;
+    margin: 0;
+    position: relative;
+    z-index: 1;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.concerns-solution .highlight {
+    font-size: 32px;
+    color: white;
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
+    font-weight: 900;
+    display: inline-block;
+    padding: 0 10px;
+}
+
+.concerns-solution strong {
+    color: #FFF9E6;
+    font-size: 28px;
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
+    text-underline-offset: 5px;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+    .concerns-grid-4 {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .concern-bubble {
+        padding: 30px 20px;
+    }
+    
+    .concern-bubble p {
+        font-size: 16px;
+    }
+    
+    
+    
+    .concerns-solution {
+        font-size: 22px;
+    }
+    
+    .concerns-solution .highlight {
+        font-size: 26px;
+    }
+    
+    .concerns-solution strong {
+        font-size: 24px;
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+}@media (max-width: 480px) {
+    .concerns-solution {
+        font-size: 20px;
+    }
+    
+    .concerns-solution .highlight {
+        font-size: 24px;
+    }
+    
+    .concerns-solution strong {
+        font-size: 22px;
+    }
+}
+
+
+/* ========================================
+   サービスセクション
+======================================== */
+.service {
+    background-color: var(--bg-light);
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+.service-card {
+    background-color: var(--bg-white);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    transition: all 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.service-number {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, var(--gold-primary), var(--gold-dark));
+    color: var(--bg-white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: 700;
+    box-shadow: var(--shadow-md);
+}
+
+.service-image {
+    position: relative;
+    height: 250px;
+}
+
+.service-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.service-title {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 15px;
+    padding: 0 30px;
+    padding-top: 30px;
+}
+
+.service-description {
+    font-size: 15px;
+    color: var(--text-secondary);
+    margin-bottom: 20px;
+    line-height: 1.8;
+    padding: 0 30px;
+}
+
+.service-benefits {
+    list-style: none;
+    padding: 0 30px 30px;
+}
+
+.service-benefits li {
+    font-size: 14px;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+}
+
+/* ========================================
+   相乗効果セクション
+======================================== */
+
+
+.synergy-visual {
+    margin: 60px 0;
+}
+
+.synergy-images {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.synergy-img {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+    transition: transform 0.3s;
+}
+
+.synergy-img:hover {
+    transform: translateY(-10px);
+}
+
+.synergy-img img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+
+
+.synergy-result {
+    background: linear-gradient(135deg, rgba(212, 165, 116, 0.1), rgba(255, 255, 255, 0.9));
+    padding: 50px;
+    border-radius: 30px;
+    text-align: center;
+    box-shadow: var(--shadow-lg);
+}
+
+.synergy-result h3 {
+    font-size: 28px;
+    color: var(--text-primary);
+    margin-bottom: 30px;
+}
+
+.synergy-benefits {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    max-width: 800px;
+    margin: 0 auto 30px;
+    text-align: left;
+}
+
+.synergy-benefits li {
+    font-size: 18px;
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+@media (max-width: 768px) {
+    .synergy-images {
+        grid-template-columns: 1fr;
+    }
+    
+    .synergy-benefits {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+.synergy-visual {
+    margin: 60px 0;
+}
+
+.synergy-images {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.synergy-img {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+    transition: transform 0.3s;
+}
+
+.synergy-img:hover {
+    transform: translateY(-10px);
+}
+
+.synergy-img img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+
+
+.synergy-result {
+    background: linear-gradient(135deg, rgba(212, 165, 116, 0.1), rgba(255, 255, 255, 0.9));
+    padding: 50px;
+    border-radius: 30px;
+    text-align: center;
+    box-shadow: var(--shadow-lg);
+}
+
+.synergy-result h3 {
+    font-size: 28px;
+    color: var(--text-primary);
+    margin-bottom: 30px;
+}
+
+.synergy-benefits {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    max-width: 800px;
+    margin: 0 auto 30px;
+    text-align: left;
+}
+
+.synergy-benefits li {
+    font-size: 18px;
+    color: var(--text-primary);
+    font-weight: 600;
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+}@media (max-width: 768px) {
+    .synergy-images {
+        grid-template-columns: 1fr;
+    }
+    
+    .synergy-benefits {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+.synergy-flow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 60px;
+    flex-wrap: wrap;
+}
+
+.synergy-step {
+    background-color: var(--bg-light);
+    padding: 40px 30px;
+    border-radius: 20px;
+    text-align: center;
+    flex: 1;
+    min-width: 250px;
+    max-width: 280px;
+    box-shadow: var(--shadow-sm);
+    transition: all 0.3s;
+    border: 2px solid transparent;
+}
+
+.synergy-step:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--gold-primary);
+}
+
+.step-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--gold-primary), var(--gold-dark));
+    color: var(--bg-white);
+    padding: 6px 15px;
+    border-radius: 15px;
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.step-icon {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.synergy-step h3 {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.synergy-step p {
+    font-size: 14px;
+    color: var(--text-secondary);
+}
+
+.synergy-arrow {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--gold-primary);
+}
+
+.synergy-result {
+    background: linear-gradient(135deg, var(--gold-primary), var(--gold-dark));
+    padding: 50px;
+    border-radius: 20px;
+    text-align: center;
+    color: var(--bg-white);
+    box-shadow: var(--shadow-lg);
+}
+
+.synergy-result h3 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.synergy-result p {
+    font-size: 16px;
+    line-height: 2;
+}
+
+/* ========================================
+   選ばれる理由
+======================================== */
+.features {
+    background-color: var(--bg-light);
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.feature-card {
+    background-color: var(--bg-white);
+    padding: 40px 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: var(--shadow-sm);
+    transition: all 0.3s;
+    border: 2px solid transparent;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--gold-primary);
+}
+
+.feature-icon {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.feature-card h3 {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 15px;
+}
+
+.feature-card p {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.8;
+}
+
+/* ========================================
+   料金プラン
+======================================== */
+.pricing {
+    background-color: var(--bg-white);
+}
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.pricing-card {
+    background-color: var(--bg-white);
+    border: 2px solid var(--border-color);
+    border-radius: 20px;
+    padding: 40px;
+    text-align: center;
+    transition: all 0.3s;
+    position: relative;
+}
+
+.pricing-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.pricing-card-featured {
+    border-color: var(--gold-primary);
+    box-shadow: var(--shadow-md);
+    transform: scale(1.05);
+}
+
+.pricing-badge {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(135deg, var(--gold-primary), var(--gold-dark));
+    color: var(--bg-white);
+    padding: 8px 25px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.pricing-header {
+    margin-bottom: 30px;
+}
+
+.pricing-header h3 {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 10px;
+}
+
+.pricing-subtitle {
+    font-size: 14px;
+    color: var(--text-secondary);
+}
+
+.pricing-price {
+    margin-bottom: 20px;
+}
+
+.price-original {
+    font-size: 16px;
+    color: var(--text-secondary);
+    text-decoration: line-through;
+    margin-bottom: 10px;
+}
+
+.price-currency {
+    font-size: 28px;
+    font-weight: 700;
+    background: linear-gradient(135deg, var(--gold-primary), var(--gold-dark));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.price-amount {
+    font-size: 60px;
+    font-weight: 700;
+    background: linear-gradient(135deg, var(--gold-primary), var(--gold-dark));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.price-period {
+    font-size: 18px;
+    color: var(--text-secondary);
+}
+
+.pricing-discount {
+    display: inline-block;
+    background-color: #ff6b6b;
+    color: var(--bg-white);
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.pricing-features {
+    list-style: none;
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.pricing-features li {
+    font-size: 15px;
+    color: var(--text-primary);
+    margin-bottom: 12px;
+    padding-left: 10px;
+}
+
+.pricing-note {
+    font-size: 13px;
+    color: var(--text-secondary);
+    margin-top: 20px;
+    line-height: 1.6;
+}
+
+/* ========================================
+   お問い合わせ
+======================================== */
+.contact {
+    background-color: var(--bg-light);
+}
+
+.contact-intro {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 50px;
+}
+
+.contact-intro p {
+    font-size: 18px;
+    color: var(--text-primary);
+    margin-bottom: 10px;
+}
+
+.contact-response {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--gold-primary);
+}
+
+.contact-methods {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto 60px;
+}
+
+.contact-method {
+    background-color: var(--bg-white);
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: var(--shadow-md);
+}
+
+.method-icon {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.contact-method h3 {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 20px;
+}
+
+.method-value a {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--gold-primary);
+    text-decoration: none;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.method-value a:hover {
+    text-decoration: underline;
+}
+
+.method-note {
+    font-size: 14px;
+    color: var(--text-secondary);
+}
+
+.email-template {
+    max-width: 800px;
+    margin: 0 auto 60px;
+}
+
+.email-template h3 {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.template-content {
+    background-color: var(--bg-white);
+    padding: 30px;
+    border-radius: 15px;
+    border: 2px dashed var(--border-color);
+    font-family: 'Courier New', monospace;
+}
+
+.template-content p {
+    font-size: 14px;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+}
+
+.access-info {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: var(--bg-white);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: var(--shadow-md);
+}
+
+.access-info h3 {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.access-details {
+    text-align: center;
+}
+
+.address {
+    font-size: 18px;
+    color: var(--text-primary);
+    margin-bottom: 15px;
+    line-height: 1.8;
+}
+
+.station {
+    font-size: 16px;
+    color: var(--gold-primary);
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.facility {
+    font-size: 14px;
+    color: var(--text-secondary);
+}
+
+/* ========================================
+   フッター
+======================================== */
+.footer {
+    background-color: var(--text-primary);
+    color: var(--bg-white);
+    padding: 60px 0 30px;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footer-brand h3 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    background: linear-gradient(135deg, var(--gold-light), var(--gold-primary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.footer-brand p,
+.footer-info p {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 8px;
+}
+
+.footer-links a {
+    display: block;
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    font-size: 14px;
+    margin-bottom: 10px;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: var(--gold-light);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.footer-bottom p {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 5px;
+}
+
+.disclaimer {
+    font-size: 12px;
+}
+
+/* ========================================
+   ページトップボタン
+======================================== */
+.page-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, var(--gold-primary), var(--gold-dark));
+    color: var(--bg-white);
+    border: none;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s;
+    box-shadow: var(--shadow-md);
+    z-index: 90;
+}
+
+.page-top.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.page-top:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+/* ========================================
+   レスポンシブデザイン
+======================================== */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 32px;
+        letter-spacing: 2px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+}
+
+    .hero-description {
+        font-size: 16px;
+    text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.8);
+}
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav {
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+
+    .nav a {
+        font-size: 13px;
+    }
+
+    .section-title {
+        font-size: 28px;
+    }
+
+    .achievements-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .achievement-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .concerns-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .service-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .synergy-flow {
+        flex-direction: column;
+    }
+
+    .synergy-arrow {
+        transform: rotate(90deg);
+    }
+
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .pricing-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .pricing-card-featured {
+        transform: scale(1);
+    }
+
+    .contact-methods {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+}
+    
+/* 問い合わせフォーム */
+.contact-form-wrapper {
+    max-width: 800px;
+    margin: 0 auto 60px;
+    background-color: var(--bg-white);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: var(--shadow-md);
+    border: 2px solid var(--gold-primary);
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+}
+
+.required {
+    color: #ff6b6b;
+    font-weight: 700;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    padding: 14px;
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
+    font-size: 15px;
+    font-family: inherit;
+    transition: all 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--gold-primary);
+    box-shadow: 0 0 0 3px rgba(212, 160, 23, 0.1);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.form-submit {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.form-note {
+    text-align: center;
+    font-size: 13px;
+    color: var(--text-secondary);
+    margin-top: 20px;
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+}@media (max-width: 768px) {
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+    
+    .contact-form-wrapper {
+        padding: 30px 20px;
+    }
+}
+
+    
+
+    50% { 
+        box-shadow: 0 20px 50px rgba(139, 105, 20, 0.8), 
+                    0 0 0 2px rgba(255, 215, 0, 0.5),
+                    inset 0 2px 15px rgba(255, 255, 255, 0.3);
+    }
+}
+
+
+    100% { transform: translate(-50%, -50%) rotate(360deg); }
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+}</style>
+</head>
+<body>
+    <!-- ヘッダー -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <h1 class="logo">天空の領域</h1>
+                <nav class="nav">
+                    <a href="#service">サービス</a>
+                    <a href="#features">特徴</a>
+                    <a href="#price">料金</a>
+                    <a href="#contact">お問い合わせ</a>
+                    
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- ヒーローセクション -->
+    <section class="hero">
+        <div class="hero-background">
+            <img src="https://www.genspark.ai/api/files/s/n67TcZaF?token=Z0FBQUFBQnBOdFhRRmNlMEk3TEFHcWgwQkRJaDFPaWlvNUVJLXhWalUyNDl3cjZyandfakEzUnJRazJ2TU5hZ2dUQXVUNm05RUVhN0lxVC0taUF3RFRoNW9vSmQ4YUpQaERVRkZUTkN6R21OT3I0bXZaVEdVNi1lWlNkSFlSZkd6b3lfOUpFN1lIZDBTRFZXVURmTzV0enpndVZmUlZqYTR4a1NvZGhlUlFnejg3V2tXWkw3OVN0R3hZck11UElEdVpuQUdNc0JkNHBwQTJpS0dvRGlueGtrRUltQjVIbTVMSmZmZl9uWXFjTHRoMmhlNHRnQktSYm8xYjRVNUx2ZVFaTUNfMHI1WkExVWNnSHduVVJwdWRnTEVZb0NfdURHdmc9PQ" alt="ヘッドスパ背景">
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">横浜・関内 発毛促進サポート専門</div>
+                <h2 class="hero-title">エクソソーム×ヘッドスパ<br>新次元の発毛促進サポート</h2>
+                <p class="hero-description">
+                    15,000人以上の頭皮を診断した毛髪診断士が<br>
+                    最先端技術で、あなたの髪の悩みをサポート
+                </p>
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn btn-primary">無料カウンセリング予約</a>
+                    <a href="#service" class="btn btn-secondary">詳しく見る</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 実績セクション -->
+    <section class="achievements">
+        <div class="container">
+            <div class="section-title-wrapper">
+                <h2 class="section-title">確かな実績と専門性</h2>
+                <div class="title-underline"></div>
+            </div>
+            <div class="achievements-grid">
+                <div class="achievement-image">
+                    <img src="https://www.genspark.ai/api/files/s/gqI3gCae?token=Z0FBQUFBQnBOdFhRWFNzVkVGcEtVQUE3bW9FajZWM3BSbi1IelNRQmtyUElwQXp2R3NKSWRZQldDNHlYRzFXYjJ5RUVHcFdIcjdpYmc3NThqV1ROSVFsMzRRekhpSTlsZmliMDdiTmZpZGNkOTVWcVMybElqV2hjLS1EbkJjSlIzOWlaS21EUjJFbmZpOVF5V3ZhRVF1WUtaYW5IUE9qVnh2emZLRlN5VC1tSERRLTVadWhrZzRBRzdtRUFuM2Rfa1M4MHNvRHBiYU03dDlfVWk3azI4Yl9MVUlOVEdXa2dtV1FLODZTMmNpNjNDZUlQLW1KaVhPMzBzbjROa1BqdEVRSmpNUnl4aXd4Uk5ucW8yaTVJOTV4ZWJBd3JXYXdGTFE9PQ" alt="毛髪診断士">
+                </div>
+                <div class="achievement-content">
+                    <h3 class="achievement-title">15,000人以上の頭皮を診断した<br><span class="gold-text">毛髪診断士</span>によるヘッドスパ</h3>
+                    <p class="achievement-description">
+                        長年の経験と専門知識を持つ毛髪診断士が、一人ひとりの頭皮状態を丁寧に診断。お客様の髪質や頭皮環境に合わせた最適なケアプランをご提案いたします。
+                    </p>
+                    <div class="achievement-stats">
+                        <div class="stat-item">
+                            <div class="stat-number">1,200+</div>
+                            <div class="stat-label">施術実績</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">96%</div>
+                            <div class="stat-label">満足度</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">30日</div>
+                            <div class="stat-label">平均実感期間</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- こんなお悩み -->
+    <section class="concerns">
+        <div class="container">
+            <div class="section-title-wrapper">
+                <h2 class="section-title">こんなお悩みありませんか?</h2>
+                <div class="section-accent"></div>
+            </div>
+
+            <div class="concerns-grid-4">
+                <div class="concern-card" data-aos="fade-up" data-aos-delay="0">
+                    <div class="concern-bubble">
+                        <p>最近、髪のボリュームが<br>減ってきた気がする...</p>
+                    </div>
+                    <h3>💭 薄毛が気になる</h3>
+                </div>
+                <div class="concern-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="concern-bubble">
+                        <p>フケやかゆみ、<br>頭皮環境が気になる</p>
+                    </div>
+                    <h3>💭 頭皮の悩み</h3>
+                </div>
+                <div class="concern-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="concern-bubble">
+                        <p>仕事や日常のストレスで<br>髪が心配</p>
+                    </div>
+                    <h3>💭 ストレスと疲労</h3>
+                </div>
+                <div class="concern-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="concern-bubble">
+                        <p>継続的なケアの方法が<br>分からない</p>
+                    </div>
+                    <h3>💭 何をすればいいか</h3>
+                </div>
+            </div>
+
+            <div class="concerns-solution-wrapper" data-aos="fade-up" data-aos-delay="400">
+                <div class="solution-arrow">↓</div>
+                </div>
+        </div>
+    </section>
+
+    <!-- 3つのアプローチ -->
+    <section id="service" class="service">
+        <div class="container">
+            <div class="section-title-wrapper">
+                <h2 class="section-title">3つのアプローチで発毛促進をサポート</h2>
+                <div class="title-underline"></div>
+            </div>
+            
+            <div class="service-grid">
+                <div class="service-card">
+                    <div class="service-number">01</div>
+                    <div class="service-image">
+                        <img src="https://www.genspark.ai/api/files/s/pG05euVI?token=Z0FBQUFBQnBOdFhRWHY3TkdXVWtNZUdmY25SdU5GSkZwWWpOa1JBb3I2N1NTcUlsQ2dtdjMyZURLNkFmQjVzc1QtT3g2SGkyY3NaS3pNNlFSNEwwUzhSeVJCdkh0U2Zid3dNZ3h1T3NuZWZwM2Z6YWN5NXUxa0hsbjhod0lIckhUU0RReVdVaE9PWGN3RGZPN1A4aVZSRkx0QnRNREYxbk9OMG9oUDVndThhRGdCWDVFdzBrWDBwaHRkUWQtbjByU0xCZEE5czR3MmpGQ2pCcktNcFFYT2dWc2xwR1U1THQ5S0NoTFZqSy1NaURIYUVsd2VDdjlUVHFlSk1MYlpWMGc0Y0RTaFRWWmZndlpmLTJpSTRjNnpuYUhhODVWMmladmc9PQ" alt="ヘッドスパ">
+                    </div>
+                    <h3 class="service-title">ヘッドスパで血行促進</h3>
+                    <p class="service-description">
+                        熟練の毛髪診断士による極上のヘッドスパで、頭皮の血行を促進。硬くなった頭皮をほぐし、毛根に栄養が届きやすい環境を整えます。
+                    </p>
+                    <ul class="service-benefits">
+                        <li>✓ 頭皮の血流改善</li>
+                        <li>✓ 毛穴の汚れ除去</li>
+                        <li>✓ リラクゼーション効果</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-number">02</div>
+                    <div class="service-image">
+                        <img src="https://www.genspark.ai/api/files/s/d8qvHl9m?token=Z0FBQUFBQnBOdGRiRHlobG1pd3pQZGR5SlFxU2pvUDhONEVKTTluYkhfcUxrNmlhbzN3S3NPbE01UHlBNDczelVFVERrMzA3QWtiaGJMQjhma3Nxd0JNaTExVmRUTE5mejloLWF5cy1sVHF1MmN0Q1ZSMkZoMUxmRnAyNjBIbkx0Q3BmUS00Z3NVOHlqMk5LUkhFVmFOREVBeDR3dlFsYzBFbmluMUpDa0xqUVJlZHozSjc4SUluQ1V2bE5ZbG9zUXBFMXo3ZE1wLUV0SXp3NkNvMXRUcEh4M18wZW5rNjQ4bU9wOHpGelM3cWhuMVdpcWtucXNSQ0ZsVnRaYWZNeDA3Vjd0SGxJLXlIOVJYanEyY044cU5leWlrVVp4emVoTXc9PQ" alt="ホームケア指導">
+                    </div>
+                    <h3 class="service-title">ホームケアで既存の髪を維持</h3>
+                    <p class="service-description">
+                        サロンでのケアに加え、ご自宅でも続けられる効果的なホームケア方法を指導。今ある髪を守りながら、健やかな頭皮環境を維持します。
+                    </p>
+                    <ul class="service-benefits">
+                        <li>✓ 正しいシャンプー方法</li>
+                        <li>✓ 頭皮マッサージ指導</li>
+                        <li>✓ 生活習慣アドバイス</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-number">03</div>
+                    <div class="service-image">
+                        <img src="https://www.genspark.ai/api/files/s/tBtMIJRZ?token=Z0FBQUFBQnBOdFhRWjY2OWt3RTg5c2szak1kUWdISnNIOVptbEJXdEVyaVNoRTY2UjRmcURFd09jbTVSdnFUVW0yNXdPV2FsRWpiUmk5dTU1ZmJMQWFDUmJiakRBUWhBdXJrc3BNUnlJYS00YlhmR0lkcm1WVnUxTGMwcko5cTFHVnpFZVBXaUlXQVp4c0tDbG1lYllFUHlyaUFHeDBDVTR2cndlR1dkSmk2enUxVmgzdk9WdzQ1YXBfX1hlRGtCanR0XzZZWTJPNzA3aFFneERISkw1SFhKVVI0NG9pRE1JdlctSi1FV1V3Q19SUEZHcFlyWUoxVmRCQjVSem9HOEVzeUZ3VFpzdXF3cUZxT3I3czR6cXlKNHhEWlNKMXlmMXc9PQ" alt="エクソソーム療法">
+                    </div>
+                    <h3 class="service-title">Xフォームで細胞活性化</h3>
+                    <p class="service-description">
+                        最先端の再生医療技術「エクソソーム」を使用し、毛根細胞を活性化。発毛促進をサポートする成長因子が、根本から髪の成長を促します。
+                    </p>
+                    <ul class="service-benefits">
+                        <li>✓ 細胞レベルで活性化</li>
+                        <li>✓ 副作用のリスクが低い</li>
+                        <li>✓ 自然な発毛促進サポート</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 相乗効果 -->
+    <!-- 選ばれる理由 -->
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-title-wrapper">
+                <h2 class="section-title">天空の領域が選ばれる<span class="gold-text">4つの理由</span></h2>
+                <div class="title-underline"></div>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🏆</div>
+                    <h3>確かな実績</h3>
+                    <p>累計1,200件以上の施術実績と、96%のお客様満足度。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔬</div>
+                    <h3>最先端技術</h3>
+                    <p>再生医療で注目のエクソソーム療法を導入。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🛡️</div>
+                    <h3>副作用リスクが低い</h3>
+                    <p>医薬品を使用しない自然な発毛促進サポート。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🚉</div>
+                    <h3>好アクセス</h3>
+                    <p>横浜・関内駅から徒歩5分。完全個室完備。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 料金プラン -->
+    <section id="price" class="pricing">
+        <div class="container">
+            <div class="section-title-wrapper">
+                <h2 class="section-title">料金プラン</h2>
+                <div class="title-underline"></div>
+            </div>
+            
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>単発コース</h3>
+                        <p class="pricing-subtitle">通常料金</p>
+                    </div>
+                    <div class="pricing-price">
+                        <span class="price-currency">¥</span>
+                        <span class="price-amount">33,000</span>
+                        <span class="price-period">/回</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>✓ カウンセリング（20分）</li>
+                        <li>✓ プレミアムヘッドスパ（30分）</li>
+                        <li>✓ エクソソーム施術（20分）</li>
+                        <li>✓ アフターケア（10分）</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-outline">詳しく見る</a>
+                </div>
+
+                <div class="pricing-card pricing-card-featured">
+                    <div class="pricing-header">
+                        <h3>3ヶ月集中コース</h3>
+                        <p class="pricing-subtitle">全6回の施術 / 人気プラン</p>
+                    </div>
+                    <div class="pricing-price">
+                        <span class="price-currency">¥</span>
+                        <span class="price-amount">58,000</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>✓ 全6回の集中ケア</li>
+                        <li>✓ 2週間に1回のペース</li>
+                        <li>✓ ホームケア指導付き</li>
+                        <li>✓ 経過写真撮影</li>
+                        <li>✓ LINEサポート</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-primary">今すぐ申し込む</a>
+                    </div>
+            </div>
+        </div>
+    </section>
+
+        <!-- お問い合わせ -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-title-wrapper">
+                <h2 class="section-title">無料カウンセリング予約・お問い合わせ</h2>
+                <div class="title-underline"></div>
+            </div>
+
+            <div class="contact-intro">
+                <p>以下のフォームよりお気軽にお問い合わせください。</p>
+                <p class="contact-response">24時間以内にご返信いたします。</p>
+            </div>
+
+            <div class="contact-form-wrapper">
+                <form id="contactForm" class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">お名前 <span class="required">*</span></label>
+                            <input type="text" id="name" name="name" required placeholder="山田 太郎">
+                        </div>
+                        <div class="form-group">
+                            <label for="furigana">ふりがな <span class="required">*</span></label>
+                            <input type="text" id="furigana" name="furigana" required placeholder="やまだ たろう">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">メールアドレス <span class="required">*</span></label>
+                            <input type="email" id="email" name="email" required placeholder="example@email.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">電話番号 <span class="required">*</span></label>
+                            <input type="tel" id="phone" name="phone" required placeholder="090-1234-5678">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="age">年齢</label>
+                        <select id="age" name="age">
+                            <option value="">選択してください</option>
+                            <option value="20代">20代</option>
+                            <option value="30代">30代</option>
+                            <option value="40代">40代</option>
+                            <option value="50代">50代</option>
+                            <option value="60代以上">60代以上</option>
+                        </select>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="date1">ご希望日時（第1希望）</label>
+                            <input type="datetime-local" id="date1" name="date1">
+                        </div>
+                        <div class="form-group">
+                            <label for="date2">ご希望日時（第2希望）</label>
+                            <input type="datetime-local" id="date2" name="date2">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">お問い合わせ内容 <span class="required">*</span></label>
+                        <textarea id="message" name="message" rows="6" required placeholder="ご相談内容をご記入ください"></textarea>
+                    </div>
+
+                    <div class="form-submit">
+                        <button type="submit" class="btn btn-primary">送信する</button>
+                    </div>
+                </form>
+
+                <p class="form-note">※Formspreeを使用しています。初回送信時に確認メールが届く場合があります。</p>
+            </div>
+
+            <div class="contact-methods">
+                <div class="contact-method">
+                    <div class="method-icon">📞</div>
+                    <h3>お電話でのお問い合わせ</h3>
+                    <p class="method-value">
+                        <a href="tel:07031797818">070-3179-7818</a>
+                    </p>
+                    <p class="method-note">営業時間: 11:00-22:00（不定休）</p>
+                </div>
+
+                <div class="contact-method">
+                    <div class="method-icon">📧</div>
+                    <h3>メールでのお問い合わせ</h3>
+                    <p class="method-value">
+                        <a href="/cdn-cgi/l/email-protection#1c75727a735c68797277696f6c7d327f7371"><span class="__cf_email__" data-cfemail="5b32353d341b2f3e35302e282b3a75383436">[email&#160;protected]</span></a>
+                    </p>
+                    <p class="method-note">直接メールでも受付中</p>
+                </div>
+            </div>
+
+            <div class="access-info">
+                <h3>アクセス</h3>
+                <div class="access-details">
+                    <p class="address">
+                        <strong>〒231-0012</strong><br>
+                        神奈川県横浜市中区相生町4丁目65 ポラリス 9階
+                    </p>
+                    <p class="station">📍 JR関内駅より徒歩5分</p>
+                    <p class="facility">完全個室・プライバシー完備</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- フッター -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>天空の領域</h3>
+                    <p>横浜・関内の発毛促進サポート専門サロン</p>
+                </div>
+                <div class="footer-info">
+                    <p>〒231-0012 神奈川県横浜市中区相生町4丁目65 ポラリス 9階</p>
+                    <p>TEL: 070-3179-7818</p>
+                    <p>営業時間: 11:00-22:00（不定休）</p>
+                </div>
+                <div class="footer-links">
+                    
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 天空の領域 All Rights Reserved.</p>
+                <p class="disclaimer">※本サービスは医療行為ではありません。効果には個人差があります。</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ページトップ -->
+    <button id="page-top" class="page-top">↑</button>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+// ========================================
+// 天空の領域 LP - パターンC JavaScript
+// ========================================
+
+document.addEventListener('DOMContentLoaded', function() {
+    
+    // ========================================
+    // ページトップボタン
+    // ========================================
+    const pageTop = document.getElementById('page-top');
+    
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 300) {
+            pageTop.classList.add('visible');
+        } else {
+            pageTop.classList.remove('visible');
+        }
+    });
+    
+    pageTop.addEventListener('click', function() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+
+    // ========================================
+    // スムーズスクロール
+    // ========================================
+    const smoothScrollLinks = document.querySelectorAll('a[href^="#"]');
+    
+    smoothScrollLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            const href = this.getAttribute('href');
+            
+            if (href === '#') {
+                e.preventDefault();
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+                return;
+            }
+            
+            const targetId = href.substring(1);
+            const targetElement = document.getElementById(targetId);
+            
+            if (targetElement) {
+                e.preventDefault();
+                const headerHeight = document.querySelector('.header').offsetHeight;
+                const targetPosition = targetElement.offsetTop - headerHeight - 20;
+                
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+
+    // ========================================
+    // スクロールアニメーション
+    // ========================================
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+            }
+        });
+    }, observerOptions);
+
+    // アニメーション対象要素
+    const animateElements = document.querySelectorAll('.service-card, .feature-card, .pricing-card, .synergy-step');
+    
+    animateElements.forEach(element => {
+        element.style.opacity = '0';
+        element.style.transform = 'translateY(30px)';
+        element.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        observer.observe(element);
+    });
+
+    // ========================================
+    // モバイルナビゲーション
+    // ========================================
+    const nav = document.querySelector('.nav');
+    const header = document.querySelector('.header');
+    
+    if (window.innerWidth <= 768) {
+        const menuButton = document.createElement('button');
+        menuButton.className = 'mobile-menu-button';
+        menuButton.innerHTML = '☰';
+        menuButton.style.cssText = `
+            display: block;
+            background: none;
+            border: none;
+            font-size: 28px;
+            color: var(--gold-primary);
+            cursor: pointer;
+            padding: 10px;
+        `;
+        
+        header.querySelector('.header-content').insertBefore(menuButton, nav);
+        
+        nav.style.display = 'none';
+        nav.style.cssText += `
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: white;
+            flex-direction: column;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        `;
+        
+        menuButton.addEventListener('click', function() {
+            if (nav.style.display === 'none' || nav.style.display === '') {
+                nav.style.display = 'flex';
+            } else {
+                nav.style.display = 'none';
+            }
+        });
+    }
+
+    // ========================================
+    // 外部リンク処理
+    // ========================================
+    const externalLinks = document.querySelectorAll('a[href^="http"]');
+    externalLinks.forEach(link => {
+        if (!link.href.includes(window.location.hostname)) {
+            link.setAttribute('target', '_blank');
+            link.setAttribute('rel', 'noopener noreferrer');
+        }
+    });
+
+    // ========================================
+    // パフォーマンス最適化: 画像遅延読み込み
+    // ========================================
+    if ('loading' in HTMLImageElement.prototype) {
+        const images = document.querySelectorAll('img');
+        images.forEach(img => {
+            img.loading = 'lazy';
+        });
+    }
+
+    // ========================================
+    // コンソールログ
+    // ========================================
+    console.log('天空の領域 LP - パターンC 読み込み完了');
+    console.log('GitHub Pages公開用バージョン');
+});
+    </script>
+</body>
+</html>
