@@ -1438,6 +1438,26 @@ iframe { display: block; }
     overflow-wrap: anywhere;
   }
 }
+        /* ===== スマホ：ヒーロータイトルを「2行で綺麗に」 ===== */
+@media (max-width: 768px){
+
+  /* 今のHTMLの <br> をスマホだけ無効化 */
+  .hero-title br{
+    display: none;
+  }
+
+  /* 2行に収める見た目調整 */
+  .hero-title{
+    font-size: 34px;        /* 32〜36で微調整OK */
+    line-height: 1.15;
+    letter-spacing: 0.5px;
+    text-align: center;
+    margin: 0 auto;
+    max-width: 92%;
+    word-break: keep-all;   /* 変な場所で割れにくくする */
+    overflow-wrap: anywhere;
+  }
+}
     </style>
 </head>
 <body>
