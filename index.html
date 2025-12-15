@@ -1253,63 +1253,85 @@ section {
         font-size: 18px;
     }
 }
-}
-/* ===== 横スクロール完全防止 ===== */
-html, body {
+/* =========================================
+   追加CSS（最終）：ズレ防止／お悩み交互／フォーム幅統一／地図整形
+   ※このブロックを </style> 直前に貼る
+========================================= */
+
+/* 横スクロール完全禁止（右ズレの根絶） */
+html, body{
   overflow-x: hidden;
-  width: 100%;
-}
-/* ===== フォーム中央寄せ＆はみ出し対策 ===== */
-.contact-form-wrapper{
-  width: 100%;
-  max-width: 720px;   /* ←少し細く */
-  margin: 0 auto 60px;
 }
 
+/* 画像とiframeのはみ出し防止 */
+img, iframe{
+  max-width: 100%;
+}
+iframe{
+  display: block;
+  width: 100%;
+}
+
+/* ===== お悩みカード：PC/スマホ共通で「白 ↔ 青グラデ」を交互（PCと同じ見た目） ===== */
+.concerns-grid .concern-card{
+  background: #fff;
+  color: var(--text-primary);
+}
+
+/* 偶数を青グラデに */
+.concerns-grid .concern-card:nth-child(even){
+  background: linear-gradient(135deg, var(--blue-light), var(--blue-primary));
+  color: #fff;
+}
+
+/* 中のテキスト色を背景に追従 */
+.concerns-grid .concern-card:nth-child(even) .concern-text p,
+.concerns-grid .concern-card:nth-child(even) .concern-label{
+  color: #fff;
+}
+
+/* accentクラスは“特別扱いしない”（PCと同じデザインへ統一） */
+.concerns-grid .concern-card.accent{
+  background: inherit;
+  color: inherit;
+  flex-direction: row;
+  gap: 0;
+}
+
+/* 💧だけ表示される事故を防止：アイコン非表示で文字だけ */
+.concerns-grid .concern-card.accent .concern-icon{
+  display: none;
+}
+.concerns-grid .concern-card.accent .concern-label{
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* ===== フォーム枠＆アクセス枠：同じ幅で中央に統一（ズレ修正） ===== */
+.contact-form-wrapper,
 .contact-access{
   width: 100%;
   max-width: 720px;
   margin: 0 auto;
+  box-sizing: border-box;
 }
 
-/* モバイルは内側余白を軽くして“右ズレ”防止 */
+/* モバイル：左右余白を揃えて右ズレ防止 */
 @media (max-width: 768px){
-  .contact-form-wrapper{
-    padding: 28px 16px;
-  }
+  .contact-form-wrapper,
   .contact-access{
     padding: 28px 16px;
   }
 }
 
-img {
-  max-width: 100%;
-  height: auto;
+/* 地図：枠に合わせて高さを整える（スマホで縦長すぎ防止） */
+.access-map iframe{
+  height: 400px;
 }
-
-iframe {
-  max-width: 100%;
-  width: 100%;
-  display: block;
-}
-
-/* ===== スマホ：お悩みカードを白／水色交互 ===== */
-@media (max-width: 768px) {
-  .concerns-grid .concern-card {
-    background: #fff;
-  }
-
-  .concerns-grid .concern-card:nth-child(even) {
-    background: var(--bg-light);
-  }
-}
-/* ===== スマホ：ヒーロータイトル2行固定 ===== */
-@media (max-width: 480px) {
-  .hero-title {
-    font-size: 24px;
-    letter-spacing: 0.5px;
-    line-height: 1.25;
-    word-break: keep-all;
+@media (max-width: 768px){
+  .access-map iframe{
+    height: 300px;
   }
 }
     </style>
@@ -1820,14 +1842,14 @@ iframe {
                 </div>
                 <div class="access-map">
                   <iframe
-                      src="https://www.google.com/maps?output=embed&q=神奈川県横浜市中区相生町4丁目65%20ポラリス"
-  width="100%"
-  height="400"
-  style="border:0; border-radius: 15px;"
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d812.5725697358212!2d139.63606856952975!3d35.447607390817666!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60185de553bc9ae1%3A0xe8d14f2dcfcfb872!2z5qiq5rWcL-mWouWGhSDjg4njg6njgqTjg5jjg4Pjg4njgrnjg5HlsILploDlupcg5aSp56m644Gu6aCY5Z-f!5e0!3m2!1sja!2sjp!4v1765819903271!5m2!1sja!2sjp"
+  width="800"
+  height="600"
+  style="border:0;"
   allowfullscreen=""
   loading="lazy"
   referrerpolicy="no-referrer-when-downgrade">
-                      </iframe>
+</iframe>
                 </div>
             </div>
         </div>
