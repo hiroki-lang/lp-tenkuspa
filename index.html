@@ -1521,6 +1521,48 @@ iframe { display: block; }
     margin-top: 0.2em;
   }
 }
+        /* ===== ヒーロー見出し：右切れ防止＋2行バランス（最終FIX） ===== */
+@media (max-width: 768px){
+
+  /* 親の余白を確保（端末で右切れしやすいので必須） */
+  .hero .container,
+  .hero-content{
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+    box-sizing: border-box !important;
+  }
+
+  /* 見出し本体：はみ出し原因（letter-spacing等）を潰す */
+  h1.hero-title{
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+
+    text-align: center !important;
+    margin: 0 auto !important;
+
+    letter-spacing: 0px !important;   /* ★右切れの主因 */
+    overflow: visible !important;
+
+    word-break: keep-all !important;  /* 日本語の変な割れ防止 */
+    overflow-wrap: anywhere !important;
+
+    transform: none !important;       /* 変形系で切れる端末があるため無効化 */
+  }
+
+  .hero-title-top{
+    display: block;
+    font-size: 30px;
+    line-height: 1.15;
+  }
+
+  .hero-title-bottom{
+    display: block;
+    font-size: 24px;   /* 下は小さくしてバランス */
+    line-height: 1.2;
+    margin-top: 6px;
+  }
+}
     </style>
 </head>
 <body>
@@ -1550,9 +1592,10 @@ iframe { display: block; }
             <div class="hero-content">
                 <div class="hero-badge">横浜・関内 発毛促進サポート専門サロン</div>
                 <h1 class="hero-title">
-  エクソソーム×ヘッドスパで<br>
-  新しい発毛促進サポート体験
+  <span class="hero-title-top">エクソソーム×ヘッドスパで</span>
+  <span class="hero-title-bottom">新しい発毛促進サポート体験</span>
 </h1>
+
                 <p class="hero-description">
                     2018年設立、施術実績15,000人以上、リピート率90%。<br>
                     毛髪診断士の資格を持つ専門家が、<br>
