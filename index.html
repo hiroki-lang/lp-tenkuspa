@@ -1399,10 +1399,19 @@ iframe { display: block; }
     letter-spacing: .02em;
   }
 }
-        @media (max-width: 768px){
+       /* ===== スマホ：ヒーロー見出しの右切れ（はみ出し）対策 ===== */
+@media (max-width: 768px){
   .hero-title{
-    font-size: 34px;   /* 36→34あたりが安全 */
-    letter-spacing: 1px;
+    max-width: 100%;
+    overflow-wrap: anywhere;   /* これが最強：はみ出しを強制的に折り返す */
+    word-break: break-word;
+    letter-spacing: 1px;       /* PCのままだと横幅が増えて切れやすいので縮める */
+  }
+
+  /* iOS Safariで描画がズレる時の保険 */
+  .hero-content{
+    padding-left: 16px;
+    padding-right: 16px;
   }
 }
     </style>
