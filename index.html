@@ -1458,6 +1458,26 @@ iframe { display: block; }
     overflow-wrap: anywhere;
   }
 }
+        /* ===== スマホ：ヒーロータイトルを2行に寄せる（強制上書き） ===== */
+@media (max-width: 768px){
+
+  /* <br> はスマホだけ無効 */
+  .hero-title br{ display:none !important; }
+
+  /* 2行に入るサイズへ調整（重要：!importantで上書き） */
+  .hero .hero-title,
+  h1.hero-title{
+    font-size: 28px !important;     /* ←ここが肝。26〜30で微調整 */
+    line-height: 1.18 !important;
+    letter-spacing: 0.5px !important;
+    padding: 0 14px !important;
+    margin: 0 auto !important;
+    max-width: 390px !important;    /* 画面幅に合わせて自然に2行化 */
+    text-wrap: balance;             /* 対応端末は綺麗に均等割り */
+    overflow-wrap: anywhere !important;
+    word-break: normal !important;
+  }
+}
     </style>
 </head>
 <body>
