@@ -153,14 +153,23 @@ img {
 }
 
 .hero-title {
-    font-size: 56px;
-    font-weight: 700;
-    color: white;
-    margin-bottom: 30px;
-    line-height: 1.4;
-    letter-spacing: 3px;
-    text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+  font-size: 56px;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 30px;
+
+  /* ↓ ここからが重要 */
+  display: inline-block;
+  line-height: 1.15;
+  padding-top: 0.45em;
+  padding-bottom: 0.1em;
+  transform: translateZ(0);
+  -webkit-font-smoothing: antialiased;
+
+  letter-spacing: 3px;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
 }
+
 
 .hero-description {
     font-size: 20px;
