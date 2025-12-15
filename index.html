@@ -1366,6 +1366,36 @@ html, body {
   /* 8 💧 何をすればいいか */
   .concerns-grid .concern-card:nth-child(8) { order: 8; }
 }
+    /* ===== 見出しの「先頭が切れる」対策（スマホ含む） ===== */
+.section-title-wrapper{
+  overflow: visible; /* 親で隠れてると先頭が欠けることがある */
+}
+
+.section-title{
+  line-height: 1.25;      /* 文字の上下の余白を安定 */
+  padding-top: .2em;      /* 上が欠けるのを防ぐ */
+  padding-bottom: .05em;
+  margin-top: 0;
+}
+
+/* スマホは見出しが詰まりやすいので少し余裕 */
+@media (max-width: 768px){
+  .section-title{
+    line-height: 1.3;
+    padding-top: .25em;
+  }
+}
+
+/* ===== 「3つのアプローチの相乗効果」を可能なら1行に =====
+   ※h2に class="title-3approach" を付けた場合だけ効く（安全運用） */
+@media (max-width: 768px){
+  .title-3approach{
+    white-space: nowrap;
+    font-size: 24px;  /* ここは好みで 22〜26px で調整OK */
+    letter-spacing: .02em;
+  }
+}
+
     </style>
 </head>
 <body>
@@ -1488,7 +1518,7 @@ html, body {
     <section id="service" class="service">
         <div class="container">
             <div class="section-title-wrapper">
-                <h2 class="section-title">3つのアプローチ</h2>
+                <h2 class="section-title title-3approach">3つのアプローチの相乗効果</h2>
                 <div class="section-accent"></div>
             </div>
             <div class="approach-grid">
