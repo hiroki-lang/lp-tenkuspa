@@ -1367,6 +1367,16 @@ html, body { overflow-x: hidden; }
   padding-bottom: .05em;
   margin-top: 0;
 }
+        /* ===== iOS Safari：ヒーロー見出しの先頭文字欠け対策（決定版） ===== */
+.hero-title,
+.hero h1 {
+  overflow: visible;
+  padding-top: 0.35em;          /* ← これが一番効く */
+  line-height: 1.3;
+  position: relative;
+  z-index: 1;
+  -webkit-font-smoothing: antialiased;
+}
     </style>
 </head>
 <body>
