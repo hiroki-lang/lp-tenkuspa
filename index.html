@@ -1259,10 +1259,40 @@ html, body {
   overflow-x: hidden;
   width: 100%;
 }
-
-img, iframe {
-  max-width: 100%;
+/* ===== フォーム中央寄せ＆はみ出し対策 ===== */
+.contact-form-wrapper{
+  width: 100%;
+  max-width: 720px;   /* ←少し細く */
+  margin: 0 auto 60px;
 }
+
+.contact-access{
+  width: 100%;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+/* モバイルは内側余白を軽くして“右ズレ”防止 */
+@media (max-width: 768px){
+  .contact-form-wrapper{
+    padding: 28px 16px;
+  }
+  .contact-access{
+    padding: 28px 16px;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+iframe {
+  max-width: 100%;
+  width: 100%;
+  display: block;
+}
+
 /* ===== スマホ：お悩みカードを白／水色交互 ===== */
 @media (max-width: 768px) {
   .concerns-grid .concern-card {
@@ -1271,21 +1301,6 @@ img, iframe {
 
   .concerns-grid .concern-card:nth-child(even) {
     background: var(--bg-light);
-  }
-
-  /* accent（青グラデ）をスマホでは無効化 */
-  .concerns-grid .concern-card.accent {
-    background: inherit !important;
-    color: var(--text-primary) !important;
-  }
-
-  .concerns-grid .concern-card.accent .concern-label {
-    color: var(--text-primary) !important;
-  }
-
-  /* 雫アイコンを消したい場合だけ */
-  .concerns-grid .concern-card.accent .concern-icon {
-    display: none;
   }
 }
 /* ===== スマホ：ヒーロータイトル2行固定 ===== */
