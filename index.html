@@ -1283,8 +1283,8 @@ html, body {
   color: #333;
 }
 
-/* 水玉（グラデーション）は偶数だけ */
-.concern-card:nth-child(even) {
+/* 青グラデにしたいカードだけ付ける */
+.concern-card.is-gradient {
   background: linear-gradient(135deg, #7fc8f0, #4f8fe6);
   color: #ffffff;
 }
@@ -1333,6 +1333,38 @@ html, body {
   .access-map iframe {
     height: 300px;
   }
+    /* =========================
+   スマホ版：悩みカードの並び順を指定
+   ========================= */
+@media (max-width: 768px) {
+  .concerns-grid {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* 1 最近、髪のボリュームが減ってきた気がする… */
+  .concerns-grid .concern-card:nth-child(1) { order: 1; }
+
+  /* 2 💧 薄毛が気になる */
+  .concerns-grid .concern-card:nth-child(3) { order: 2; }
+
+  /* 3 フケやかゆみ、頭皮環境が気になる */
+  .concerns-grid .concern-card:nth-child(2) { order: 3; }
+
+  /* 4 💧 頭皮の悩み */
+  .concerns-grid .concern-card:nth-child(4) { order: 4; }
+
+  /* 5 仕事や日常のストレスで髪が心配 */
+  .concerns-grid .concern-card:nth-child(5) { order: 5; }
+
+  /* 6 💧 ストレスと疲労 */
+  .concerns-grid .concern-card:nth-child(7) { order: 6; }
+
+  /* 7 継続的なケアの方法が分からない */
+  .concerns-grid .concern-card:nth-child(6) { order: 7; }
+
+  /* 8 💧 何をすればいいか */
+  .concerns-grid .concern-card:nth-child(8) { order: 8; }
 }
     </style>
 </head>
