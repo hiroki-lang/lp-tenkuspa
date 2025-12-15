@@ -1478,6 +1478,26 @@ iframe { display: block; }
     word-break: normal !important;
   }
 }
+        /* ===== スマホ：ヒーロータイトル 上大・下小で2行固定 ===== */
+@media (max-width: 768px){
+
+  .hero-title{
+    font-size: 30px !important;   /* 上の行 */
+    line-height: 1.15 !important;
+    letter-spacing: .5px !important;
+    padding: 0 14px !important;
+    margin: 0 auto !important;
+    text-align: center;
+  }
+
+  /* 2行目だけ小さくする */
+  .hero-title br + *{
+    display: inline-block;
+    font-size: 24px !important;   /* ← 下の行を小さく */
+    line-height: 1.25 !important;
+    margin-top: .2em;
+  }
+}
     </style>
 </head>
 <body>
@@ -1506,7 +1526,10 @@ iframe { display: block; }
         <div class="container">
             <div class="hero-content">
                 <div class="hero-badge">横浜・関内 発毛促進サポート専門サロン</div>
-                <h1 class="hero-title">エクソソーム×ヘッドスパで<br>新しい発毛促進サポート体験</h1>
+                <h1 class="hero-title">
+  エクソソーム×ヘッドスパで<br>
+  新しい発毛促進サポート体験
+</h1>
                 <p class="hero-description">
                     2018年設立、施術実績15,000人以上、リピート率90%。<br>
                     毛髪診断士の資格を持つ専門家が、<br>
