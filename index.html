@@ -1414,6 +1414,30 @@ iframe { display: block; }
     padding-right: 16px;
   }
 }
+        /* ===== iOS Safari：ヒーロー右切れ完全対策（決定版） ===== */
+@media (max-width: 768px){
+
+  /* ヒーロー全体を画面内に固定 */
+  .hero,
+  .hero-content,
+  .hero .container {
+    max-width: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+  }
+
+  /* 見出し自体の横はみ出し防止 */
+  .hero-title {
+    max-width: 100%;
+    box-sizing: border-box;
+    padding-left: 0;
+    padding-right: 0;
+    letter-spacing: 0.5px;   /* ← ここが超重要（3pxは広すぎ） */
+    word-break: break-word;
+    overflow-wrap: anywhere;
+  }
+}
     </style>
 </head>
 <body>
