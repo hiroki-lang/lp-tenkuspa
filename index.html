@@ -1253,78 +1253,65 @@ section {
         font-size: 18px;
     }
 }
-/* 横スクロール完全禁止（右ズレの根絶） */
-html, body{
-  overflow-x: hidden;
-}
+/* 右ズレ・横スクロール根絶 */
+html, body { overflow-x: hidden; }
+*, *::before, *::after { box-sizing: border-box; }
 
-/* 画像とiframeのはみ出し防止 */
-img, iframe{
-  max-width: 100%;
-}
-iframe{
-  display: block;
-  width: 100%;
-}
+/* 画像・iframeのはみ出し防止（これ1本でOK） */
+img, iframe { max-width: 100%; }
 
-/* ===== お悩みカード：PC/スマホ共通で「白 ↔ 青グラデ」を交互（PCと同じ見た目） ===== */
+/* iframeはブロック化して中央寄せ崩れを防ぐ */
+iframe { display: block; width: 100%; border: 0; }
+
+/* -------------------------------
+   お悩みカード：PC/スマホ共通で
+   「白」⇄「青グラデ」を交互（PCと同じ見た目）
+-------------------------------- */
 .concerns-grid .concern-card{
   background: #fff;
   color: var(--text-primary);
 }
 
-/* 偶数を青グラデに */
 .concerns-grid .concern-card:nth-child(even){
   background: linear-gradient(135deg, var(--blue-light), var(--blue-primary));
   color: #fff;
 }
 
-/* 中のテキスト色を背景に追従 */
+/* 偶数カードの中の文字色も白に揃える（薄くなる事故防止） */
+.concerns-grid .concern-card:nth-child(even) .concern-text,
 .concerns-grid .concern-card:nth-child(even) .concern-text p,
 .concerns-grid .concern-card:nth-child(even) .concern-label{
   color: #fff;
 }
 
-/* accentクラスは“特別扱いしない”（PCと同じデザインへ統一） */
-.concerns-grid .concern-card.accent{
-  background: inherit;
-  color: inherit;
-  flex-direction: row;
-  gap: 0;
-}
+/* アイコン（雫）が消える事故防止：非表示にしない */
+.concerns-grid .concern-icon{ display: block; }
 
-/* 💧だけ表示される事故を防止：アイコン非表示で文字だけ */
-.concerns-grid .concern-card.accent .concern-icon{
-  display: none;
-}
-.concerns-grid .concern-card.accent .concern-label{
-  font-size: 16px;
-  font-weight: 600;
-  text-align: center;
-}
-
-/* ===== フォーム枠＆アクセス枠：同じ幅で中央に統一（ズレ修正） ===== */
+/* -------------------------------
+   フォーム枠とアクセス枠：同じ幅で中央に統一
+-------------------------------- */
 .contact-form-wrapper,
 .contact-access{
   width: 100%;
   max-width: 720px;
   margin: 0 auto;
-  box-sizing: border-box;
 }
 
-/* モバイル：左右余白を揃えて右ズレ防止 */
+/* -------------------------------
+   地図：フォームと同じ枠幅に合わせて高さ調整
+-------------------------------- */
+.access-map iframe{
+  width: 100%;
+  height: 400px;
+  border-radius: 16px; /* 角丸いらなければ消してOK */
+}
+
+/* モバイル調整：左右余白を適正化＋地図高さ */
 @media (max-width: 768px){
   .contact-form-wrapper,
   .contact-access{
     padding: 28px 16px;
   }
-}
-
-/* 地図：枠に合わせて高さを整える（スマホで縦長すぎ防止） */
-.access-map iframe{
-  height: 400px;
-}
-@media (max-width: 768px){
   .access-map iframe{
     height: 300px;
   }
