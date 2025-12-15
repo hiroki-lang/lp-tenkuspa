@@ -1498,6 +1498,29 @@ iframe { display: block; }
     margin-top: .2em;
   }
 }
+        /* ===== スマホ：ヒーロータイトル 完全決定版 ===== */
+@media (max-width: 768px){
+
+  .hero-title{
+    font-size: 30px !important;   /* 上の行 */
+    line-height: 1.18 !important;
+    letter-spacing: 0.5px !important; /* ★ここが最重要 */
+    padding: 0 16px !important;
+    margin: 0 auto !important;
+    text-align: center;
+    word-break: keep-all;
+    overflow-wrap: break-word;
+  }
+
+  /* 下の行を少し小さく */
+  .hero-title br + *{
+    display: inline-block;
+    font-size: 24px !important;
+    line-height: 1.25 !important;
+    letter-spacing: 0.3px !important;
+    margin-top: 0.2em;
+  }
+}
     </style>
 </head>
 <body>
