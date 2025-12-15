@@ -1127,7 +1127,7 @@ section {
     .hero-title {
         font-size: 32px;
         line-height: 1.4;
-        word-break: break-word;
+        word-break: keep-all;
         letter-spacing: 2px;
     }
 
@@ -1252,6 +1252,50 @@ section {
         padding: 15px 35px;
         font-size: 18px;
     }
+}
+}
+/* ===== 横スクロール完全防止 ===== */
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+img, iframe {
+  max-width: 100%;
+}
+/* ===== スマホ：お悩みカードを白／水色交互 ===== */
+@media (max-width: 768px) {
+  .concerns-grid .concern-card {
+    background: #fff;
+  }
+
+  .concerns-grid .concern-card:nth-child(even) {
+    background: var(--bg-light);
+  }
+
+  /* accent（青グラデ）をスマホでは無効化 */
+  .concerns-grid .concern-card.accent {
+    background: inherit !important;
+    color: var(--text-primary) !important;
+  }
+
+  .concerns-grid .concern-card.accent .concern-label {
+    color: var(--text-primary) !important;
+  }
+
+  /* 雫アイコンを消したい場合だけ */
+  .concerns-grid .concern-card.accent .concern-icon {
+    display: none;
+  }
+}
+/* ===== スマホ：ヒーロータイトル2行固定 ===== */
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 24px;
+    letter-spacing: 0.5px;
+    line-height: 1.25;
+    word-break: keep-all;
+  }
 }
     </style>
 </head>
@@ -1760,15 +1804,15 @@ section {
                     <p class="access-station">JR関内駅 徒歩5分</p>
                 </div>
                 <div class="access-map">
-                   <iframe
-  src="https://maps.app.goo.gl/HpvCtMTACnR22wEL9?g_st=ipc"
+                  <iframe
+                      src="https://www.google.com/maps?output=embed&q=神奈川県横浜市中区相生町4丁目65%20ポラリス"
   width="100%"
   height="400"
   style="border:0; border-radius: 15px;"
   allowfullscreen=""
   loading="lazy"
   referrerpolicy="no-referrer-when-downgrade">
-</iframe>
+                      </iframe>
                 </div>
             </div>
         </div>
