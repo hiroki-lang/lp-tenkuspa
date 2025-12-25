@@ -1632,6 +1632,91 @@ iframe { display: block; }
   color: #ddd;
   line-height: 1.6;
 }
+        /* ===== ボタン：iOSで文字が欠けるのを防ぐ（最重要） ===== */
+.btn{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1.2;
+  padding-block: 18px;     /* 上下を明示 */
+  padding-inline: 40px;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: geometricPrecision;
+}
+
+.btn-large{
+  padding-block: 20px;
+  padding-inline: 50px;
+}
+
+/* 送信ボタンも同じ */
+.form-submit .btn{
+  min-height: 56px; /* 押しやすさ + 欠け防止 */
+}
+
+/* ===== 2枚目（実績）：中央揃え + 折り返し自然に ===== */
+.achievement-text{
+  text-align: center;
+}
+
+.achievement-title{
+  text-align: center;
+  text-wrap: balance;      /* 対応ブラウザで自然な改行 */
+}
+
+.achievement-description{
+  text-align: center;
+  text-wrap: balance;
+}
+
+/* チェック箇条書きだけは読みやすく左揃えで中央配置 */
+.achievement-points{
+  display: inline-block;
+  text-align: left;
+  margin: 0 auto;
+}
+
+/* ===== 3枚目：見出しを1行に ===== */
+.concerns .section-title{
+  white-space: nowrap;
+}
+
+/* 青いカード（交互の水色側）を「少し大きく・太く」 */
+.concern-card.accent .concern-label{
+  font-size: 18px;
+  font-weight: 800;
+}
+
+/* もし青カードの本文も使うなら */
+.concern-card.accent .concern-text p{
+  font-size: 17px;
+  font-weight: 800;
+  color: #fff;
+}
+
+/* ===== 4枚目：アプローチ01/02/03 を中央に ===== */
+.approach-number{
+  display: block;
+  margin: 0 auto 20px;
+  text-align: center;
+}
+
+/* ===== 4枚目：相乗効果の見出しを指定の折り返し＆中央揃え ===== */
+.synergy-result-title{
+  text-align: center;
+  line-height: 1.25;
+}
+
+/* ===== 5枚目：サポート体制を1行にしたい（カード幅で落ちる場合） ===== */
+.feature-title{
+  white-space: nowrap;
+}
+
+@media (max-width: 480px){
+  .feature-title{
+    font-size: 18px; /* 20→18にして1行化しやすく */
+  }
+}
     </style>
 </head>
 <body>
@@ -1665,10 +1750,10 @@ iframe { display: block; }
   <span class="hero-title-sub">新しい発毛促進サポート体験</span>
 </h1>
                 <p class="hero-description">
-                    2018年設立、施術実績15,000人以上、リピート率90%。<br>
-                    毛髪診断士の資格を持つ専門家が、<br>
-                    最先端のエクソソーム療法と極上のヘッドスパであなたの髪の悩みを改善します。
-                </p>
+  2018年設立、施術実績15,000人以上、リピート率90%。<br>
+  毛髪診断士の資格を持つ専門家が、<br>
+  最先端のエクソソーム療法と極上のヘッドスパであなたの髪の悩みを改善します。
+</p>
                 <div class="hero-buttons">
                     <a href="#contact" class="btn btn-primary btn-large">無料カウンセリング予約</a>
                 </div>
@@ -1685,12 +1770,14 @@ iframe { display: block; }
             </div>
             <div class="achievements-content">
                 <div class="achievement-text">
-                    <h3 class="achievement-title">2018年設立、15,000人以上を施術<br>リピート率90%の毛髪診断士在籍サロン</h3>
+                    <h3 class="achievement-title">
+  2018年設立、15,000人以上を施術 リピート率90%の毛髪診断士在籍サロン
+</h3>
                     <p class="achievement-description">
-                        7年間で15,000人以上の施術実績を持つ、毛髪診断士在籍サロン。<br>
-                        専門知識と豊富な経験で一人ひとりの頭皮状態を丁寧に診断し、<br>
-                        お客様の90%がリピートする信頼のケアプランをご提案いたします。
-                    </p>
+  7年間で15,000人以上の施術実績を持つ、毛髪診断士在籍サロン。
+  専門知識と豊富な経験で一人ひとりの頭皮状態を丁寧に診断し、
+  お客様の90%がリピートする信頼のケアプランをご提案いたします。
+</p>
                     <ul class="achievement-points">
                         <li>✓ 2018年設立、7年間の実績</li>
                         <li>✓ 施術実績 15,000人突破</li>
@@ -1724,11 +1811,9 @@ iframe { display: block; }
                     </div>
                 </div>
                 <div class="concern-card accent">
-                    <div class="concern-icon">💧</div>
                     <div class="concern-label">薄毛が気になる</div>
                 </div>
                 <div class="concern-card accent">
-                    <div class="concern-icon">💧</div>
                     <div class="concern-label">頭皮の悩み</div>
                 </div>
                 <div class="concern-card">
@@ -1742,11 +1827,9 @@ iframe { display: block; }
                     </div>
                 </div>
                 <div class="concern-card accent">
-                    <div class="concern-icon">💧</div>
                     <div class="concern-label">ストレスと疲労</div>
                 </div>
                 <div class="concern-card accent">
-                    <div class="concern-icon">💧</div>
                     <div class="concern-label">何をすればいいか</div>
                 </div>
             </div>
@@ -1851,7 +1934,9 @@ iframe { display: block; }
                 </div>
             </div>
             <div class="synergy-result">
-                <h3 class="synergy-result-title">継続的な発毛促進サポート環境の実現</h3>
+               <h3 class="synergy-result-title">
+  継続的な発毛促進<br>サポート環境の実現
+</h3>
                 <p class="synergy-result-description">
                     3つのアプローチを組み合わせることで、頭皮環境の改善から細胞活性化、そして日々のケアまで、<br>
                     トータルで髪のお悩みをサポートする総合的なアプローチを実現します。
