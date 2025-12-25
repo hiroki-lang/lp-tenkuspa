@@ -1717,6 +1717,86 @@ iframe { display: block; }
     font-size: 18px; /* 20→18にして1行化しやすく */
   }
 }
+        /* ===== 1枚目：サブ見出しを1行固定（スマホでも折り返さない） ===== */
+.hero-title-sub{
+  white-space: nowrap;
+}
+
+/* 端末幅が狭いときは、はみ出さないように少しだけ縮める */
+@media (max-width: 480px){
+  .hero-title-sub{
+    font-size: 20px;      /* 18〜22で微調整OK */
+    letter-spacing: 0.2px;
+  }
+}
+
+/* さらに小さい端末（SE系）対策 */
+@media (max-width: 375px){
+  .hero-title-sub{
+    font-size: 18px;
+  }
+}
+        /* ===== 2枚目：実績セクション（スマホ最適化） ===== */
+@media (max-width: 768px){
+  .achievements .container{
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+    overflow-x: hidden !important;
+  }
+
+  .achievement-title{
+    text-align: center;
+    font-size: 22px !important;   /* ←少し小さく */
+    line-height: 1.45 !important;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    word-break: keep-all;
+    overflow-wrap: anywhere;       /* ←右見切れ防止の本命 */
+  }
+
+  .achievement-description{
+    text-align: center;
+    font-size: 14px !important;    /* ←少し小さく */
+    line-height: 1.9 !important;
+    max-width: 100%;
+    overflow-wrap: anywhere;
+  }
+
+  .achievement-points{
+    padding-left: 0 !important;
+    text-align: left;              /* 箇条書きは左の方が読みやすい */
+    max-width: 520px;
+    margin: 0 auto;
+  }
+}
+        /* ===== 3枚目：こんなお悩み（スマホ最適化） ===== */
+@media (max-width: 768px){
+  .concerns .container{
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+    overflow-x: hidden !important;
+  }
+
+  .concerns .section-title{
+    font-size: 26px !important;   /* ここも少し下げる */
+    letter-spacing: 0 !important;
+    overflow-wrap: anywhere;
+  }
+
+  .concern-card{
+    max-width: 100%;
+    overflow: hidden;
+  }
+
+  .concern-label,
+  .concern-text p{
+    font-size: 15px !important;   /* ←少し小さく */
+    line-height: 1.6 !important;
+    overflow-wrap: anywhere;      /* ←右見切れ防止 */
+    word-break: break-word;
+  }
+}
     </style>
 </head>
 <body>
@@ -1771,9 +1851,10 @@ iframe { display: block; }
             <div class="achievements-content">
                 <div class="achievement-text">
                     <h3 class="achievement-title">
-  2018年設立、15,000人以上を施術 リピート率90%の毛髪診断士在籍サロン
+  2018年設立、15,000人以上を施術。リピート率90%の毛髪診断士在籍サロン
 </h3>
-                    <p class="achievement-description">
+
+<p class="achievement-description">
   7年間で15,000人以上の施術実績を持つ、毛髪診断士在籍サロン。
   専門知識と豊富な経験で一人ひとりの頭皮状態を丁寧に診断し、
   お客様の90%がリピートする信頼のケアプランをご提案いたします。
