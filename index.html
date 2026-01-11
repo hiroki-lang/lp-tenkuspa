@@ -1808,6 +1808,43 @@ iframe { display: block; }
     word-break: keep-all;     /* 日本語の変な改行防止 */
   }
 }
+     .pricing-price--bundle{ margin-bottom: 18px; }
+.bundle-row{
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  gap: 10px;
+  margin: 6px 0;
+}
+.bundle-label{
+  font-size: 14px;
+  color: var(--text-secondary);
+  font-weight: 700;
+}
+.bundle-old{
+  font-size: 22px;
+  color: rgba(0,0,0,0.45);
+  text-decoration: line-through;
+  font-weight: 700;
+}
+.bundle-new{
+  font-size: 44px;
+  font-weight: 800;
+  color: #ff6b6b;
+  text-shadow: 0 2px 8px rgba(255, 107, 107, 0.25);
+}
+.bundle-note{
+  margin-top: 8px;
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+@media (max-width: 768px){
+  .bundle-new{ font-size: 38px; }
+}
+     .badge-strong{
+  font-weight: 800;
+  font-size: 1.05em;
+}
     </style>
 </head>
 <body>
@@ -2213,6 +2250,13 @@ iframe { display: block; }
                             <li>・施術効果を持続</li>
                             <li>・定着させる補強ケア</li>
                         </ul>
+                     <h4>◆サポート（全コース共通）</h4>
+<ul>
+  <li>・ホームケア内容：シャンプー方法/頭皮ケア/生活習慣の最適化</li>
+  <li>・専用LINEサポート：施術後の相談/経過フォロー</li>
+  <li>・カウンセリング：毛髪診断士在籍サロンが頭皮状態を丁寧に確認</li>
+  <li>・特典：スカルプシャンプー1本プレゼント</li>
+</ul>
                     </div>
                     
                     <a href="#contact" class="btn btn-primary" style="margin-top: 30px;">無料カウンセリング予約</a>
@@ -2220,24 +2264,37 @@ iframe { display: block; }
                 </div>
 
                 <!-- モニター特別価格 -->
-                <div class="pricing-card pricing-card-featured">
-                    <div class="pricing-badge">今回限定!</div>
-                    <div class="pricing-header">
-                        <h3 class="pricing-title">モニター特別価格</h3>
-                        <p class="pricing-subtitle">3ヶ月集中プラン（全6回）</p>
-                        <p class="pricing-duration">約90分の施術</p>
-                    </div>
-                    <div class="pricing-price">
-                        <div class="price-amount-featured">¥58,000</div>
-                        <div class="price-period">3ヶ月 / 全6回</div>
-                    </div>
+             <div class="pricing-card pricing-card-featured">
+
+  <div class="pricing-badge">
+    今回限定!<br>
+    残り<span class="badge-strong">◯</span>枠 / <span class="badge-strong">◯日</span>まで
+  </div>
+
+  <div class="pricing-header">
+    <h3 class="pricing-title">モニター特別価格</h3>
+    <p class="pricing-subtitle">3ヶ月集中プラン（全6回）</p>
+    <p class="pricing-duration">約90分の施術</p>
+  </div>
+                <div class="pricing-price pricing-price--bundle">
+  <div class="bundle-row">
+    <span class="bundle-label">全6回</span>
+    <span class="bundle-old">198,000円</span>
+  </div>
+  <div class="bundle-row bundle-row--new">
+    <span class="bundle-label">モニター価格</span>
+    <span class="bundle-new">58,000円</span>
+  </div>
+  <div class="bundle-note">※3ヶ月集中プラン（全6回）</div>
+</div>
                     <ul class="pricing-features">
-                        <li>✓ 毛髪診断士によるカウンセリング</li>
-                        <li>✓ プレミアムヘッドスパ</li>
-                        <li>✓ エクソソーム施術（全6回）</li>
-                        <li>✓ ホームケアアドバイス＋経過観察</li>
-                        <li>✓ 専用LINEサポート</li>
-                    </ul>
+  <li>✓ カウンセリング（毛髪診断士在籍サロン）</li>
+  <li>✓ プレミアムヘッドスパ（全6回）</li>
+  <li>✓ エクソソーム施術（全6回）</li>
+  <li>✓ ホームケア内容（シャンプー方法/頭皮ケア/生活習慣の最適化）</li>
+  <li>✓ 専用LINEサポート（期間中の相談/経過フォロー）</li>
+  <li>🎁 スカルプシャンプー1本プレゼント</li>
+</ul>
                     <a href="#contact" class="btn btn-primary" style="margin-top: 30px;">無料カウンセリング予約</a>
                     <p class="pricing-note">※モニタープランは写真撮影にご協力いただける方限定です（お顔は写りません）</p>
                 </div>
