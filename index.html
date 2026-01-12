@@ -1909,11 +1909,11 @@ iframe { display: block; }
     padding-top: 34px; /* バッジ分、少し余白増やす */
   }
 }
-          /* 今回限定・モニター告知（主役） */
-.limited-notice {
-  margin: 0 auto 8px;
+/* 今回限定・モニター告知（主役） */
+.pricing-card-featured .limited-notice{
+  margin: 6px auto 14px;     /* タイトル上に置くならマイナス不要 */
   padding: 14px 20px;
-  max-width: 260px;
+  max-width: 320px;          /* PCで少し見栄えUP（好みで260でもOK） */
   text-align: center;
   border-radius: 14px;
   background: linear-gradient(135deg, #ff6b6b, #ff4d4d);
@@ -1921,24 +1921,23 @@ iframe { display: block; }
   box-shadow: 0 8px 20px rgba(255, 77, 77, 0.35);
 }
 
-/* 1行目：強い訴求 */
-.limited-line1 {
-  display: block;
-  font-size: 16px;
-  font-weight: 800;
-  letter-spacing: 0.08em;
+.limited-line1{
+  display:block;
+  font-size:16px;
+  font-weight:800;
+  letter-spacing:0.06em;
 }
 
-/* 2行目：具体条件 */
-.limited-line2 {
-  display: block;
-  margin-top: 6px;
-  font-size: 14px;
-  font-weight: 700;
-  background: rgba(255,255,255,0.2);
-  padding: 6px 10px;
-  border-radius: 999px;
+.limited-line2{
+  display:block;
+  margin-top:6px;
+  font-size:14px;
+  font-weight:700;
+  background:rgba(255,255,255,0.2);
+  padding:6px 10px;
+  border-radius:999px;
 }
+
      @media (max-width: 480px){
   .limited-line1{
     font-size: 17px;
@@ -1965,6 +1964,15 @@ iframe { display: block; }
   .pricing-subtitle{ margin-bottom: 2px; }
   .pricing-duration{ margin-bottom: 4px; }
   .limited-notice{ margin-top: 4px; }
+}
+     /* モニターカードだけ上のpaddingを詰める */
+.pricing-card-featured{
+  padding-top: 24px;   /* 40px→24px */
+}
+
+/* タイトル周りの下余白も詰める */
+.pricing-card-featured .pricing-header{
+  margin-bottom: 12px; /* 30px→12px */
 }
     </style>
 </head>
