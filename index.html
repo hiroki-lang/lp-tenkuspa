@@ -1868,6 +1868,47 @@ iframe { display: block; }
   font-weight: 800;
   font-size: 1.05em;
 }
+     /* ===== モニター価格：今回限定バッジを1行＆中央配置 ===== */
+.pricing-card {
+  position: relative; /* 念のため（既にあるが保険） */
+}
+
+.pricing-badge--inline{
+  position: absolute;
+  top: 18px;              /* カード上部に固定 */
+  left: 50%;
+  transform: translateX(-50%);
+  width: max-content;
+  max-width: calc(100% - 48px);
+  padding: 10px 18px;
+  border-radius: 999px;
+  font-size: 14px;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;    /* 1行固定 */
+  z-index: 3;
+}
+
+.pricing-badge--inline .badge-strong{
+  font-weight: 800;
+}
+
+/* バッジが“モニター特別価格”タイトルに被らないように、タイトル側に上余白を付ける */
+.pricing-card-featured .pricing-header{
+  padding-top: 28px;  /* 24〜40で好み調整 */
+}
+
+/* スマホだけ少し小さくして確実に1行に */
+@media (max-width: 480px){
+  .pricing-badge--inline{
+    font-size: 12px;
+    padding: 8px 14px;
+    top: 14px;
+  }
+  .pricing-card-featured .pricing-header{
+    padding-top: 34px; /* バッジ分、少し余白増やす */
+  }
+}
     </style>
 </head>
 <body>
@@ -2243,55 +2284,44 @@ iframe { display: block; }
                         <div class="price-amount">¥33,000</div>
                         <div class="price-period">1回あたり</div>
                     </div>
-                    
                     <div class="pricing-detail-section">
-                        <h4>◆カウンセリング</h4>
-                        <ul>
-                            <li>・頭皮状態・生活習慣・薄毛要因を専門スタッフが分析</li>
-                            <li>・現状に応じた改善戦略を個別に設計</li>
-                            <li>・自宅での実践ポイントまで明確化</li>
-                        </ul>
-                        
-                        <h4>◆プレミアムヘッドスパ</h4>
-                        <ul>
-                            <li>・髪にとって1番の美容液は血液と言われています。</li>
-                            <li>・強い髪を育てるためにまずは血行促進。</li>
-                            <li>・育毛成分が浸透しやすい頭皮環境へ整備</li>
-                            <li>・睡眠・自律神経・ストレス要因にもアプローチ</li>
-                        </ul>
-                        
-                        <h4>◆エクソソーム施術</h4>
-                        <ul>
-                            <li>・細胞レベルで発毛サイクルを活性化する集中アプローチ</li>
-                            <li>・初期段階から変化を追える個別カルテ管理</li>
-                            <li>・回数ごとに進行度を最適化し、結果につなげる設計</li>
-                        </ul>
-                        
-                        <h4>◆ホームケア</h4>
-                        <ul>
-                            <li>・頭皮用美容液・シャンプーなどで日々のケアを最適化</li>
-                            <li>・施術効果を持続</li>
-                            <li>・定着させる補強ケア</li>
-                        </ul>
-                     <h4>◆サポート（全コース共通）</h4>
-<ul>
-  <li>・ホームケア内容：シャンプー方法/頭皮ケア/生活習慣の最適化</li>
-  <li>・専用LINEサポート：施術後の相談/経過フォロー</li>
-  <li>・カウンセリング：毛髪診断士在籍サロンが頭皮状態を丁寧に確認</li>
-  <li>・特典：スカルプシャンプー1本プレゼント</li>
-</ul>
-                    </div>
-                    
+  <h4>◆カウンセリング</h4>
+  <ul>
+    <li>・頭皮状態・生活習慣・薄毛要因を専門スタッフが分析</li>
+    <li>・現状に応じた改善戦略を個別に設計</li>
+    <li>・自宅での実践ポイントまで明確化</li>
+  </ul>
+
+  <h4>◆プレミアムヘッドスパ</h4>
+  <ul>
+    <li>・髪にとって1番の美容液は血液と言われています。</li>
+    <li>・強い髪を育てるためにまずは血行促進。</li>
+    <li>・育毛成分が浸透しやすい頭皮環境へ整備</li>
+    <li>・睡眠・自律神経・ストレス要因にもアプローチ</li>
+  </ul>
+
+  <h4>◆エクソソーム施術</h4>
+  <ul>
+    <li>・細胞レベルで発毛サイクルを活性化する集中アプローチ</li>
+    <li>・初期段階から変化を追える個別カルテ管理</li>
+    <li>・回数ごとに進行度を最適化し、結果につなげる設計</li>
+  </ul>
+
+  <h4>◆ホームケアサポート</h4>
+  <ul>
+    <li>・頭皮用美容液・シャンプーなどで日々のケアを最適化する商品のご紹介</li>
+    <li>・施術効果のヒアリング</li>
+    <li>・定着させる補強ケアアドバイス</li>
+  </ul>
+</div>
                     <a href="#contact" class="btn btn-primary" style="margin-top: 30px;">無料カウンセリング予約</a>
                     <p class="pricing-note">※初回のみカウンセリング時間が延長になる場合がございます</p>
                 </div>
                <!-- モニター特別価格 -->
 <div class="pricing-card pricing-card-featured">
-  <div class="pricing-badge">
-    今回限定!<br>
-    残り<span class="badge-strong">5</span>枠 / <span class="badge-strong">1/20</span>まで
-  </div>
-
+  <div class="pricing-badge pricing-badge--inline">
+  今回限定‼｜残り<span class="badge-strong">5</span>枠<span class="badge-strong"> 1/20</span>まで
+</div>
   <div class="pricing-header">
     <h3 class="pricing-title">モニター特別価格</h3>
     <p class="pricing-subtitle">3ヶ月集中プラン（全6回）</p>
@@ -2311,7 +2341,6 @@ iframe { display: block; }
     <div class="bundle-note">※3ヶ月集中プラン（全6回）</div>
   </div>
 
-  <!-- ✅ ここが追加：通常コース側と同じ“説明” -->
   <div class="pricing-detail-section">
     <h4>◆カウンセリング（毛髪診断士在籍サロン）</h4>
     <ul>
@@ -2342,12 +2371,12 @@ iframe { display: block; }
       <li>・定着させる補強ケア</li>
     </ul>
 
-    <h4>◆サポート（全コース共通）</h4>
+    <h4>◆モニター特別サポート</h4>
     <ul>
       <li>・ホームケア内容：シャンプー方法/頭皮ケア/生活習慣の最適化</li>
       <li>・専用LINEサポート：期間中の相談/経過フォロー</li>
       <li>・カウンセリング：毛髪診断士在籍サロンが頭皮状態を丁寧に確認</li>
-      <li>・特典：スカルプシャンプー1本プレゼント</li>
+      <li>・特典：スカルプシャンプー1本プレゼント🎁</li>
     </ul>
   </div>
 
