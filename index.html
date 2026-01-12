@@ -1909,6 +1909,36 @@ iframe { display: block; }
     padding-top: 34px; /* バッジ分、少し余白増やす */
   }
 }
+          /* 今回限定・モニター告知（主役） */
+.limited-notice {
+  margin: 0 auto 8px;
+  padding: 14px 20px;
+  max-width: 260px;
+  text-align: center;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #ff6b6b, #ff4d4d);
+  color: #fff;
+  box-shadow: 0 8px 20px rgba(255, 77, 77, 0.35);
+}
+
+/* 1行目：強い訴求 */
+.limited-line1 {
+  display: block;
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+/* 2行目：具体条件 */
+.limited-line2 {
+  display: block;
+  margin-top: 6px;
+  font-size: 14px;
+  font-weight: 700;
+  background: rgba(255,255,255,0.2);
+  padding: 6px 10px;
+  border-radius: 999px;
+}
      @media (max-width: 480px){
   .limited-line1{
     font-size: 17px;
@@ -1929,6 +1959,12 @@ iframe { display: block; }
 }
      .pricing-title {
   margin-bottom: 8px; /* デフォルトより小さく */
+}
+     @media (max-width: 768px){
+  .pricing-title{ margin-bottom: 6px; }
+  .pricing-subtitle{ margin-bottom: 2px; }
+  .pricing-duration{ margin-bottom: 4px; }
+  .limited-notice{ margin-top: 4px; }
 }
     </style>
 </head>
