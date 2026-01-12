@@ -1845,6 +1845,29 @@ iframe { display: block; }
   font-weight: 800;
   font-size: 1.05em;
 }
+     /* ===== モニターカード：バッジとタイトルが被らないようにする ===== */
+.pricing-card {
+  position: relative;
+}
+
+/* featuredカードだけ、上に余白を足す（バッジの高さ分） */
+.pricing-card-featured{
+  padding-top: 72px; /* ←バッジの高さに合わせて調整（60〜90でOK） */
+}
+
+/* バッジをカード内の右上に固定（被りにくい位置） */
+.pricing-badge{
+  top: 18px;      /* -15px をやめる */
+  right: 18px;
+  left: auto;
+  z-index: 2;
+}
+
+/* バッジ内の強調（◯枠/◯日） */
+.badge-strong{
+  font-weight: 800;
+  font-size: 1.05em;
+}
     </style>
 </head>
 <body>
@@ -2262,13 +2285,11 @@ iframe { display: block; }
                     <a href="#contact" class="btn btn-primary" style="margin-top: 30px;">無料カウンセリング予約</a>
                     <p class="pricing-note">※初回のみカウンセリング時間が延長になる場合がございます</p>
                 </div>
-
-                <!-- モニター特別価格 -->
-             <div class="pricing-card pricing-card-featured">
-
+               <!-- モニター特別価格 -->
+<div class="pricing-card pricing-card-featured">
   <div class="pricing-badge">
     今回限定!<br>
-    残り<span class="badge-strong">◯</span>枠 / <span class="badge-strong">◯日</span>まで
+    残り<span class="badge-strong">5</span>枠 / <span class="badge-strong">1/20</span>まで
   </div>
 
   <div class="pricing-header">
@@ -2276,28 +2297,63 @@ iframe { display: block; }
     <p class="pricing-subtitle">3ヶ月集中プラン（全6回）</p>
     <p class="pricing-duration">約90分の施術</p>
   </div>
-                <div class="pricing-price pricing-price--bundle">
-  <div class="bundle-row">
-    <span class="bundle-label">全6回</span>
-    <span class="bundle-old">198,000円</span>
+
+  <!-- 価格表示（全6回→モニター価格） -->
+  <div class="pricing-price pricing-price--bundle">
+    <div class="bundle-row">
+      <span class="bundle-label">全6回</span>
+      <span class="bundle-old">198,000円</span>
+    </div>
+    <div class="bundle-row bundle-row--new">
+      <span class="bundle-label">モニター価格</span>
+      <span class="bundle-new">58,000円</span>
+    </div>
+    <div class="bundle-note">※3ヶ月集中プラン（全6回）</div>
   </div>
-  <div class="bundle-row bundle-row--new">
-    <span class="bundle-label">モニター価格</span>
-    <span class="bundle-new">58,000円</span>
+
+  <!-- ✅ ここが追加：通常コース側と同じ“説明” -->
+  <div class="pricing-detail-section">
+    <h4>◆カウンセリング（毛髪診断士在籍サロン）</h4>
+    <ul>
+      <li>・頭皮状態・生活習慣・薄毛要因を専門スタッフが分析</li>
+      <li>・現状に応じた改善戦略を個別に設計</li>
+      <li>・自宅での実践ポイントまで明確化</li>
+    </ul>
+
+    <h4>◆プレミアムヘッドスパ（全6回）</h4>
+    <ul>
+      <li>・髪にとって1番の美容液は血液と言われています。</li>
+      <li>・強い髪を育てるためにまずは血行促進。</li>
+      <li>・育毛成分が浸透しやすい頭皮環境へ整備</li>
+      <li>・睡眠・自律神経・ストレス要因にもアプローチ</li>
+    </ul>
+
+    <h4>◆エクソソーム施術（全6回）</h4>
+    <ul>
+      <li>・細胞レベルで発毛サイクルを活性化する集中アプローチ</li>
+      <li>・初期段階から変化を追える個別カルテ管理</li>
+      <li>・回数ごとに進行度を最適化し、結果につなげる設計</li>
+    </ul>
+
+    <h4>◆ホームケア</h4>
+    <ul>
+      <li>・頭皮用美容液・シャンプーなどで日々のケアを最適化</li>
+      <li>・施術効果を持続</li>
+      <li>・定着させる補強ケア</li>
+    </ul>
+
+    <h4>◆サポート（全コース共通）</h4>
+    <ul>
+      <li>・ホームケア内容：シャンプー方法/頭皮ケア/生活習慣の最適化</li>
+      <li>・専用LINEサポート：期間中の相談/経過フォロー</li>
+      <li>・カウンセリング：毛髪診断士在籍サロンが頭皮状態を丁寧に確認</li>
+      <li>・特典：スカルプシャンプー1本プレゼント</li>
+    </ul>
   </div>
-  <div class="bundle-note">※3ヶ月集中プラン（全6回）</div>
+
+  <a href="#contact" class="btn btn-primary" style="margin-top: 30px;">無料カウンセリング予約</a>
+  <p class="pricing-note">※モニタープランは写真撮影にご協力いただける方限定です（お顔は写りません）</p>
 </div>
-                    <ul class="pricing-features">
-  <li>✓ カウンセリング（毛髪診断士在籍サロン）</li>
-  <li>✓ プレミアムヘッドスパ（全6回）</li>
-  <li>✓ エクソソーム施術（全6回）</li>
-  <li>✓ ホームケア内容（シャンプー方法/頭皮ケア/生活習慣の最適化）</li>
-  <li>✓ 専用LINEサポート（期間中の相談/経過フォロー）</li>
-  <li>🎁 スカルプシャンプー1本プレゼント</li>
-</ul>
-                    <a href="#contact" class="btn btn-primary" style="margin-top: 30px;">無料カウンセリング予約</a>
-                    <p class="pricing-note">※モニタープランは写真撮影にご協力いただける方限定です（お顔は写りません）</p>
-                </div>
             </div>
         </div>
     </section>
